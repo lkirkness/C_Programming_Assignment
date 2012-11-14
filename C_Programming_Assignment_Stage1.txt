@@ -1,0 +1,35 @@
+/* File:        C_Programming_Assignment_Stage1.c
+   Author:      Lucas Kirkness
+   Email Id:    kirly005@mymail.unisa.edu.au
+   Version:     1.0 10 November 2012
+   Description: C Programming Assignment - Stage 1 - Creates 2 random numbers representing the roll of a pair of dice and prints the results to the screen.
+   */
+
+#include <stdio.h>
+#include <time.h>
+
+int main()
+{
+	/* Initialise Integers */
+	int die1;
+	int die2;
+	int diceTotal;
+	
+	/* Generate random numbers */
+	srand(time(NULL));
+
+	die1 = 1 + (rand() % 6);
+
+	die2 = 1 + (rand() % 6);
+
+	/* Calculate total of Dice rolled */
+	diceTotal = die1 + die2;
+
+	/* Print the results to the screen */
+    printf("You rolled: %d + %d = %d\n", die1, die2, diceTotal);
+
+	/* Print Thankyou message to screen */
+	printf("\nThanks for playing!\n");
+
+	return 0;
+}
